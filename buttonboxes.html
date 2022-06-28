@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+    <meta name ="vieport"/>
+                  <content"width=device-width,initial-scale=1.0" />
+  
+    <meta charset="utf-8"/>
+        <title>Tipes of popup boxes</title>
+    </head>
+    <body>
+      <table width= "100%", height="150px", border="1" /> 
+      <tr>
+          <td>
+              <p align="center"><button onclick="  alerta()">Alert box</button>
+                  
+             </p>    
+             <script>
+                 function alerta(){
+                     alert("Aceasta este de tipul: alert box!")
+                 }
+             </script>
+          </td>
+          <td>
+              <p align="center"><button onclick="prompta()">Prompt box</button>
+              </p>
+              <script>
+                  function prompta(){
+                 var X = prompt("Ce fel de `box` este: de tip alert,  de tip prompt sau de tip confirm box?");
+                  //for debuggin alert(×)
+                  if(X=="prompt"){
+                  alert("Corect!");}
+            
+            else if (X==null){
+            return;}
+            else {
+                alert("Wrong!");
+                var y=confirm("Vreti da mai introdiuceti inca o data raspunsul?");
+                if(y==true){
+                    prompta();
+                }
+                else {
+                    return;}
+                }
+            }
+              </script>
+          </td>
+          <td>
+              <p align="center"><button onclick="confirma()">Confirm box</button>
+              </p>
+              <script>
+                  function confirma(){
+                      confirm("Acesta este de tipul: confirm box")
+                       var n=confirm("Iti place aplicatia?");
+                       if(n===true){
+                           alert("Merci!");}
+                           else {
+                               alert("Ne poti semnala ce doresti sa schimbam!");}
+                           
+                       }
+                  
+              </script>
+          </td>
+      </tr>
+    </body>
+</html>
